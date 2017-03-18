@@ -1,0 +1,23 @@
+version: '2'
+services:
+  sql_report:
+    image: mysql
+    environment:
+      MYSQL_ROOT_PASSWORD: root
+      MYSQL_DATABASE: report
+    networks:
+      - network
+  jboss_report:
+    build: ./jboss
+    ports:
+      - 18080:8080
+      - 19990:9990
+      - 15005:5005
+    volumes:
+      - ../target/report-module.war:/opt/jboss/wildfly/standalone/deployments/hms-reporting-app.war
+    networks:
+      - network
+networks:
+  network:
+    driver: bridge
+

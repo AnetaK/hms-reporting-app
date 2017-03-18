@@ -1,4 +1,4 @@
-package hms-report;
+package pl.report;
 
 import junit.framework.Test;
 import junit.framework.TestCase;

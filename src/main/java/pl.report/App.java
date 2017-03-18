@@ -1,4 +1,4 @@
-package hms-report;
+package pl.report;
 
 /**
  * Hello world!
