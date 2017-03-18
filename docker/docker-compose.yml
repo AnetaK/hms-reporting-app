@@ -14,7 +14,7 @@ services:
       - 19990:9990
       - 15005:5005
     volumes:
-      - ../target/report-module.war:/opt/jboss/wildfly/standalone/deployments/hms-reporting-app.war
+      - ../target/hms-report.war:/opt/jboss/wildfly/standalone/deployments/hms-report.war
     networks:
       - network
 networks:
